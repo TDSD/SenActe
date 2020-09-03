@@ -1,0 +1,55 @@
+.footer {
+    border-top: 10px solid  rgba(0, 0, 0, 0.125);;
+    background: url('../../../images/footer-bg3.png') no-repeat;
+    background-size: cover;
+  }
+
+  .logofacebook {
+    background: url('../../../images/icon_facebook.png') no-repeat center center;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+  }
+  .logotwitter {
+    background: url('../../../images/icon_twitter.png') no-repeat center center;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: contain;
+  }
+  a{
+    color: white;
+  }
+
+  a:hover{
+    color: rgb(155, 144, 144);
+  }
+
+  i{
+    color: white;
+    font-size: 20px;
+  }
+  
+  .p-footer{
+    font-family: 'Monaco';
+    font-size: 1.75em;
+    color: white;
+  }
+  
+  
+  .padding-div {
+    padding: 25px 25px 25px 25px;
+    height: 195px;
+  }
+  
+  .margin-div {
+    margin-left: 40px;
+  }
+  
+  .logos {
+    margin-top: 30px;
+    margin-left: 30px;
+  }

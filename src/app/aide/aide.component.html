@@ -1,0 +1,66 @@
+<h1 class="display-4">Quelques informations concernant la plateforme</h1><br><br>
+
+<div id="accordion">
+    <div class="row margin-row">
+        
+        <div class="col-lg-6">
+
+            <div class="card" [ngStyle]="{'background-color': collapseOne}">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne" (click)="onClick()" [ngStyle]="{'color': linkcolor}">
+                        <div>
+                            <i class="fa fa-question-circle icon" aria-hidden="true" [ngStyle]="{'color': iconcolor}" ></i>
+                            Collapsible Group Item #1
+                        </div>
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body color">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="card" [ngStyle]="{'background-color': collapseThree}">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseThree" (click)="onClickThree()" [ngStyle]="{'color': linkcolorThree}">
+                        <div>
+                            <i class="fa fa-question-circle icon" aria-hidden="true" [ngStyle]="{'color': iconcolorThree}" ></i>
+                            Collapsible Group Item #1
+                        </div>
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body color">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+            </div><br>
+
+        </div>
+        
+        <div class="col-lg-6">
+
+            <div class="card" [ngStyle]="{'background-color': collapsetwo}">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapsetwo"  (click)="onClicktwo()" [ngStyle]="{'color': linkcolortwo}">
+                        <div>
+                            <i class="fa fa-question-circle icon" aria-hidden="true" [ngStyle]="{'color': iconcolortwo}" ></i>
+                            Collapsible Group Item #1
+                        </div>
+                    </a>
+                </div>
+                <div id="collapsetwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body color">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                </div>
+            </div><br>
+
+        </div>
+
+    </div>
+</div>
+<br><br><br><br>
+
+
