@@ -56,13 +56,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AideComponent } from './aide/aide.component';
 import { OfficierComponent } from './officier/officier.component';
+import { HistoryDemandeComponent } from './history-demande/history-demande.component';
 
 
 const appRoutes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'aide', component: AideComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'officier', component: OfficierComponent }
+  
 ];
 
 @NgModule({
@@ -74,7 +77,8 @@ const appRoutes: Routes = [
     AuthComponent,
     RegisterComponent,
     AideComponent,
-    OfficierComponent
+    OfficierComponent,
+    HistoryDemandeComponent
   ],
   imports: [
     BrowserModule,

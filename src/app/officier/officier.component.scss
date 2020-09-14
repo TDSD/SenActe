@@ -1,0 +1,47 @@
+
+.menu li
+{
+   display: inline-block;
+   padding: 0.5% 5%;
+   line-height: 90px;
+   justify-content: center;
+}
+.menu li
+{
+   border: outset 2px #048B9A;
+   text-align: end;
+} 
+.menu li:hover
+{
+   border: outset 2px #048B9A;
+   text-align: end;
+   background-color: #79F8F8;
+   text-decoration: none;
+} 
+li{
+   margin-left: 1em;
+}
+div
+{
+   margin-top: 15em;
+   
+}
+
+.menu li i
+{
+   font-size: 80px;
+   align-items: center;
+  
+   color:#00CCCB;
+}
+.menu li i{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 1em;
+}
+.menu li label
+{
+   display: flex;
+   line-height: 80px;
+}
