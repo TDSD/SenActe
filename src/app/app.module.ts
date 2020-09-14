@@ -55,6 +55,7 @@ import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AideComponent } from './aide/aide.component';
+import { OfficierComponent } from './officier/officier.component';
 
 
 const appRoutes: Routes = [
@@ -72,7 +73,8 @@ const appRoutes: Routes = [
     FooterComponent,
     AuthComponent,
     RegisterComponent,
-    AideComponent
+    AideComponent,
+    OfficierComponent
   ],
   imports: [
     BrowserModule,
