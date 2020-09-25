@@ -56,7 +56,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AideComponent } from './aide/aide.component';
 import { OfficierComponent } from './officier/officier.component';
-import { HistoryDemandeComponent } from './history-demande/history-demande.component';
 
 
 const appRoutes: Routes = [
@@ -77,8 +76,7 @@ const appRoutes: Routes = [
     AuthComponent,
     RegisterComponent,
     AideComponent,
-    OfficierComponent,
-    HistoryDemandeComponent
+    OfficierComponent
   ],
   imports: [
     BrowserModule,
