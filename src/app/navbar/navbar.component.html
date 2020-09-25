@@ -4,13 +4,19 @@
       <span class="spantitle">SenActe</span>
     </a>
     <div class="ml-auto">
-      <a routerLink="/"><button mat-stroked-button color="accent" class="aide"> <i class="fa fa-home" aria-hidden="true"></i> Accueil</button></a>&nbsp;&nbsp;
-      <a routerLink="/aide"><button mat-stroked-button color="accent" class="aide"> <i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button></a>&nbsp;&nbsp;
-      <button type="button" class="btn color" data-toggle="modal" data-target="#myModal">Connexion</button>&nbsp;&nbsp;
+      <a routerLink="/" *ngIf="role === 'internaute'"><button mat-stroked-button color="accent" class="aide"> <i class="fa fa-home" aria-hidden="true"></i> Accueil</button></a>&nbsp;&nbsp;
+      <a routerLink="/aide" *ngIf="role === 'internaute'"><button mat-stroked-button color="accent" class="aide"> <i class="fa fa-question-circle" aria-hidden="true"></i> Aide</button></a>&nbsp;&nbsp;
+      <button *ngIf="role === 'internaute'" type="button" class="btn color" data-toggle="modal" data-target="#myModal">Connexion</button>&nbsp;&nbsp;
       <app-auth></app-auth>
-      <a routerLink="/register"><button type="button" class="btn color">Créer un compte</button></a>
-    </div> 
-    
+      <a routerLink="/register" *ngIf="role === 'internaute'" ><button type="button" class="btn color">Créer un compte</button></a>
+      <a routerLink="/home-officier" *ngIf="role === 'admin'" ><button type="button" class="btn color">Retour</button></a>&nbsp;&nbsp;
+      <a routerLink="/" *ngIf="role === 'user'"><button mat-stroked-button color="accent" class="aide" (click)="retour()"> <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion</button></a>
+      <a routerLink="/" *ngIf="role === 'admin'"><button mat-stroked-button color="accent" class="aide" (click)="retour()" > <i class="fa fa-power-off" aria-hidden="true"></i> Déconnexion</button></a>
+      <a routerLink="/rendez-vous" *ngIf="role === 'user'"><button mat-stroked-button color="accent" class="aide">  Prendre un rendez-vous</button></a>&nbsp;&nbsp;
+      <label for="" *ngIf="role === 'user'">Monique Faye</label>&nbsp;&nbsp;&nbsp;
+      <i class="fa fa-user-circle connect" *ngIf="role === 'user'"></i>
+      <label for="" *ngIf="role === 'admin'">Officier Diop</label>&nbsp;&nbsp;&nbsp;
+      <i class="fa fa-user-circle connect" *ngIf="role === 'admin'"></i>
       
-    
+    </div> 
   </nav>

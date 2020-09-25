@@ -1,0 +1,91 @@
+<body>
+    <div class="container">
+        <h2>Acte de deces</h2>
+        <form action="" class="form" role="form" (ngSubmit)="soumettre()" [formGroup]="declarerFormDeces">
+            <div class="row">
+                <div class="form-group col">
+                    <label for="num" >numero Acte:</label>
+                    <input type="number" name="num" id="num" class="form-control" placeholder="numero registre">
+                </div>
+                <div class="form-group col">
+                    <label for="an">Annee de l'acte:</label>
+                    <input type="number" name="an" id="an" class="form-control" placeholder="entrer l'année">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="officier" c>Nom Officier:</label>
+                <div>
+                    <input type="text" name="officier" id="officier" class="form-control" placeholder="entrer votre nom et prenom" required >
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="nom" >Nom:</label>
+                    <input type="text" name="nom" id="nom" class="form-control"placeholder="entrer nom" required >
+                </div>
+                <div class="form-group col">
+                    <label for="prenom" >Prenom:</label>
+                    <input type="text" name="prenom" id="prenom" class="form-control" placeholder="entrer prenom" required >
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="nomPere" >Nom pere:</label>
+                        <input type="text" name="nomPere" id="nomPere" class="form-control" placeholder="nom du pere" required >
+                </div> 
+                <div class="form-group col">
+                    <label for="" >Prenom pere:</label>
+                    <input type="text" name="prenomPere" id="prenomPere" class="form-control" placeholder="prenom du pere" required >
+                </div>  
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="nomMere" >Nom mére</label>
+                    <input type="text" name="nomMere" id="nomMere" class="form-control" placeholder="nom de la mére" required >
+                </div> 
+                <div class="form-group col">
+                    <label for="prenomMere" >Prenom Mere:</label>
+                    <input type="text" name="prenomMere" id="prenomMere" class="form-control" placeholder="prenom de la mére" required >
+                </div> 
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label for="dateNaiss" >Date de Naissance:</label>
+                    <input type="date" name="dateNaiss" id="dateNaiss" class="form-control" placeholder="entrer la date de naissance" required >
+                </div> 
+                <div class="form-group col">
+                    <label for="lieuNaiss" >Lieu de Naissance:</label>
+                    <input type="text" name="lieuNaiss" id="lieuNaiss" class="form-control" placeholder="entrer le lieu de naissance" required >
+                </div> 
+            </div>
+            <div class="form-group" >
+                <label for="sexe" >Sexe</label>
+                <select class="form-control" id="sexe" required >
+                    <option>M</option>
+                    <option>F</option>
+                </select>   
+            </div> 
+            <div class="form-group">
+                <label for="age" >Heure de Naissance:</label>
+                <input type="number" name="age" id="age" class="form-control" required >
+            </div>
+            <div class="form-group">
+                <label for="dateDeces" >Date de decés:</label>
+                <input type="date" name="dateDeces" id="dateDeces" class="form-control" required >
+            </div>
+            <div class="form-group">
+                <label for="heureDeces" >heure de decés:</label>
+                <input type="time" name="heureDeces" id="heureDeces" class="form-control" required >
+            </div>
+            <div class="form-group">
+                <label for="lieuDeces">Lieu de decés</label>
+                <input type="text" name="lieuDeces" id="lieuDeces" class="form-control" required >
+            </div>
+            <div class="form-group">
+                <label for="profess">Profession:</label>
+                <input type="text" name="profess" id="profess" class="form-control" required>
+            </div>
+            <button class="btn btn-success">Soumettre</button>
+        </form>
+    </div> 
+</body>

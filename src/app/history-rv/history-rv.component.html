@@ -1,0 +1,66 @@
+<body>
+    <div class="container">
+        <h2>Historique  des rendez-vous</h2>
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>Date</th>
+                <th>Heure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngIf="!annuler">
+                <td>Therese</td>
+                <td>Diagne</td>
+                <td>theresediagne@gmail.sn</td>
+                <td>773158546</td>
+                <td>25/09/2020</td>
+                <td>8h:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <button class="btn btn-danger" (click)=supp()>Annuler</button>
+                </td>
+                
+        
+              </tr>
+              <tr>
+                <td>Alseny</td>
+                <td>Diallo</td>
+                <td>alsenydiallo@gmail.com</td>
+                <td>771760963</td>
+                <td>25/09/2020</td>
+                <td>
+                  10h &nbsp;&nbsp;&nbsp;
+                  <button class="btn btn-danger">Annuler</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Djibril</td>
+                <td>Sow</td>
+                <td>djibrilsow@gmail.com</td>
+                <td>774013396</td>
+                <td>25/09/2020</td>
+                <td>
+                    11h &nbsp;&nbsp;&nbsp;
+                  <button class="btn btn-danger">Annuler</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Monique</td>
+                <td>Faye</td>
+                <td>moniquefaye@gmail.com</td>
+                <td>775096494</td>
+                <td>22/09/2020</td>
+                <td>
+                    10h &nbsp;&nbsp;&nbsp;
+                  <button class="btn btn-danger">Annuler</button>
+                </td>
+              </tr>
+             
+            </tbody>
+          </table>
+    </div>
+</body>

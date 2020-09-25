@@ -1,0 +1,190 @@
+<div class="row">
+    <h2 class="display-4">Demande acte de naissance</h2>
+      <div class="container-fluid divgeneral col-sm-8">
+          <form class="form was-validated" role="form" (ngSubmit)="create()" [formGroup]="demandeForm">
+              
+            <label for="">Vous êtes :</label>
+            <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio" checked>L'intéressé
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">Son fils/ Sa fille
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">Son père/Sa mère
+                </label>
+              </div><br>
+            
+               <div class="row">
+  
+                  <div class="form-group col">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom" formControlName="prenom" value="Monique" required>
+                    <div *ngIf="demandeForm.get('prenom')!.invalid && (demandeForm.get('prenom')!.dirty || demandeForm.get('prenom')!.touched)">
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('prenom')?.errors?.required"
+                      >
+                          Vous devez renseigner votre prénom.
+                      </small>
+                    </div>
+                  </div>
+  
+                  <div class="form-group col">
+                    <label for="nom">Nom</label>
+                    <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom" formControlName="nom" value="Faye" required>
+                    <div *ngIf="demandeForm.get('nom')!.invalid && (demandeForm.get('nom')!.dirty || demandeForm.get('nom')!.touched)">
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('nom')?.errors?.required"
+                      >
+                          Vous devez renseigner votre nom.
+                      </small>
+                    </div>
+                  </div>
+  
+               </div>
+  
+  
+               <div class="form-group">
+                <label for="Email">email</label>
+                <input type="text" class="form-control taille-input-unique" name="email" id="email" placeholder="Email" formControlName="email" value="moniquefaye@gmail.com" required>
+                <div *ngIf="demandeForm.get('email')!.invalid && (demandeForm.get('email')!.dirty || demandeForm.get('email')!.touched)">
+                  <small class="form-text text-danger"
+                         *ngIf="demandeForm.get('email')?.errors?.required"
+                  >
+                      Vous devez renseigner votre email.
+                  </small>
+  
+                  <small class="form-text text-danger"
+                         *ngIf="demandeForm.get('email')?.errors?.invalid"
+                  >
+                      Votre email est invalide.
+                  </small>
+  
+                  <small class="form-text text-danger"
+                         *ngIf="demandeForm.get('email')?.errors?.minlength"
+                  >
+                      Votre email doit contenir au moins 5 caractères.
+                  </small>
+  
+                  <small class="form-text text-danger"
+                         *ngIf="demandeForm.get('email')?.errors?.maxlength"
+                  >
+                      Votre email ne peut pas dépasser 100 caractères.
+                  </small>
+              </div>
+               </div>
+  
+  
+               
+  
+  
+                <div class="row">
+  
+                  <div class="form-group col">
+                    <label for="dateNaiss">Date de naissance</label>
+                    <input type="date" class="form-control" name="dateNaiss" id="dateNaiss" placeholder="Date de naissance" formControlName="dateNaiss" value="05-01-1992" required>
+                    <div *ngIf="demandeForm.get('dateNaiss')!.invalid && (demandeForm.get('dateNaiss')!.dirty || demandeForm.get('dateNaiss')!.touched)">
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('dateNaiss')?.errors?.required"
+                      >
+                          Vous devez renseigner votre date de naissance.
+                      </small>
+                    </div>
+                  </div>
+  
+                  <div class="form-group col">
+                    <label for="lieuNaiss">Lieu de naissance</label>
+                    <input type="lieuNaiss" class="form-control" name="lieuNaiss" id="lieuNaiss" placeholder="Lieu de naissance" formControlName="lieuNaiss" value="Dakar" required>
+                    <div *ngIf="demandeForm.get('lieuNaiss')!.invalid && (demandeForm.get('lieuNaiss')!.dirty || demandeForm.get('lieuNaiss')!.touched)">
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('lieuNaiss')?.errors?.required"
+                      >
+                          Vous devez renseigner votre lieu de naissance.
+                      </small>
+                    </div>
+                  </div>
+  
+                </div>
+  
+  
+                <div class="form-group">
+                  <label for="numRegistre">Numéro de registre de votre acte de naissance</label>
+                  <input type="number" class="form-control taille-input-unique" name="numRegistre" id="numRegistre" placeholder="Numéro de registre de votre acte de naissance" formControlName="numRegistre" value="64" required>
+                  <div *ngIf="demandeForm.get('numRegistre')!.invalid && (demandeForm.get('numRegistre')!.dirty || demandeForm.get('numRegistre')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="demandeForm.get('numRegistre')?.errors?.required"
+                    >
+                        Vous devez renseigner votre lieu de naissance.
+                    </small>
+                  </div>
+                </div>
+  
+  
+                <div class="row">
+  
+                  <div class="form-group col">
+                    <label for="numTel">Numéro de téléphone</label>
+                    <input type="tel" class="form-control" name="numTel" id="numTel" placeholder="Numéro de téléphone" formControlName="numTel" value="775096494" required>
+                    <div *ngIf="demandeForm.get('numTel')!.invalid && (demandeForm.get('numTel')!.dirty || demandeForm.get('numTel')!.touched)">
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('numTel')?.errors?.required"
+                      >
+                          Vous devez confirmer votre mot de passe
+                      </small>
+  
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('numTel')?.errors?.minlength"
+                      >
+                          Votre numéro de téléphone doit contenir au moins 4 caractères.
+                      </small>
+  
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('numTel')?.errors?.maxlength"
+                      >
+                          Votre numéro de téléphone ne doit pas dépasser 9 caractères.
+                      </small>
+                  </div>
+                </div>
+  
+                  <div class="form-group col">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" class="form-control" name="adresse" id="adresse" placeholder="Adresse" formControlName="adresse" value="Point E" required>
+                    <div *ngIf="demandeForm.get('adresse')!.invalid && (demandeForm.get('adresse')!.dirty || demandeForm.get('adresse')!.touched)">
+                      <small class="form-text text-danger"
+                             *ngIf="demandeForm.get('adresse')?.errors?.required"
+                      >
+                          Vous devez renseigner votre adresse.
+                      </small>
+                    </div>
+                  </div>
+  
+                </div><br>
+                <label for="">Vous souhaitez :</label><br>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
+                    <label class="custom-control-label" for="customRadio">Venir à la mairie payer les frais de timbre et récupérer votre document</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
+                    <label class="custom-control-label" for="customRadio2">Le recevoir par courriel et payer en ligne</label>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="btn btn-primary">Valider</button><br><br>
+                <div class="alert alert-success" *ngIf="success">
+                    <strong>Demande prise en compte</strong> vueillez payez par orange monnaie ou free monnaie afin de pouvoir recevoir votre acte de naissance.
+                </div>
+                <div *ngIf="success">
+                    <img src="./../../assets/images/logo_om.jpg" alt=""> code marchand : 215DGB10
+                </div>
+                <div *ngIf="success">
+                    <img src="./../../assets/images/logo_fm.jpg" alt=""> code marchand : 826EHC21
+                    </div>
+          </form>
+      </div>
+  </div>
+  
+  

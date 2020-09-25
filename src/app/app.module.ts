@@ -55,12 +55,36 @@ import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AideComponent } from './aide/aide.component';
+import { HomeDemandeurComponent } from './home-demandeur/home-demandeur.component';
+import { HomeOfficierComponent } from './home-officier/home-officier.component';
+import { AlertComponent } from './alert/alert.component';
+import { PlanningComponent } from './planning/planning.component';
+import { HistoryDemandeComponent } from './history-demande/history-demande.component';
+import { HomeDeclarationComponent } from './home-declaration/home-declaration.component';
+import { DeclarationNaissanceComponent } from './declaration-naissance/declaration-naissance.component';
+import { DeclarationDecesComponent } from './declaration-deces/declaration-deces.component';
+import { HistoryRvComponent } from './history-rv/history-rv.component';
+import { RendezVousComponent } from './rendez-vous/rendez-vous.component';
+import { DemandeNaissanceComponent } from './demande-naissance/demande-naissance.component';
+import { DelivrerActeComponent } from './delivrer-acte/delivrer-acte.component';
 
 
 const appRoutes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'aide', component: AideComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'demandeur', component: HomeDemandeurComponent},
+  { path: 'home-officier', component: HomeOfficierComponent},
+  { path: 'planning', component: PlanningComponent},
+  { path: 'compte', component: AlertComponent},
+  { path: 'history-demande', component: HistoryDemandeComponent},
+  { path: 'history-rv', component: HistoryRvComponent},
+  { path: 'home-declaration', component: HomeDeclarationComponent},
+  { path: 'rendez-vous', component:RendezVousComponent },
+  { path: 'declaration-naissance',component:DeclarationNaissanceComponent},
+  { path: 'declaration-deces',component:DeclarationDecesComponent},
+  { path: 'demande-naissance',component:DemandeNaissanceComponent},
+  { path: 'delivre-acte',component:DelivrerActeComponent },
   { path: '', component: HomeComponent }
 ];
 
@@ -72,7 +96,19 @@ const appRoutes: Routes = [
     FooterComponent,
     AuthComponent,
     RegisterComponent,
-    AideComponent
+    AideComponent,
+    HomeDemandeurComponent,
+    HomeOfficierComponent,
+    AlertComponent,
+    PlanningComponent,
+    HomeDeclarationComponent,
+    DeclarationDecesComponent,
+    DeclarationNaissanceComponent,
+    HistoryDemandeComponent,
+    HistoryRvComponent,
+    RendezVousComponent,
+    DemandeNaissanceComponent,
+    DelivrerActeComponent
   ],
   imports: [
     BrowserModule,

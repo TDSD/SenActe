@@ -1,17 +1,211 @@
-<p>register works!
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajk,s;
-    suhuhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    sssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajk,s;
-    suhuhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-    sssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-</p><br><br><br><br>
+<div class="row">
+  <h2 class="display-4">Création d'un compte utilisateur</h2>
+    <div class="container-fluid divgeneral col-sm-8">
+        <form class="form was-validated" role="form" (ngSubmit)="create()" [formGroup]="registerForm">
+             
+          
+             <div class="row">
+
+                <div class="form-group col">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" class="form-control" name="prenom" id="prenom" placeholder="Prénom" formControlName="prenom" required>
+                  <div *ngIf="registerForm.get('prenom')!.invalid && (registerForm.get('prenom')!.dirty || registerForm.get('prenom')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('prenom')?.errors?.required"
+                    >
+                        Vous devez renseigner votre prénom.
+                    </small>
+                  </div>
+                </div>
+
+                <div class="form-group col">
+                  <label for="nom">Nom</label>
+                  <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom" formControlName="nom" required>
+                  <div *ngIf="registerForm.get('nom')!.invalid && (registerForm.get('nom')!.dirty || registerForm.get('nom')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('nom')?.errors?.required"
+                    >
+                        Vous devez renseigner votre nom.
+                    </small>
+                  </div>
+                </div>
+
+             </div>
+
+
+             <div class="form-group">
+              <label for="Email">email</label>
+              <input type="text" class="form-control taille-input-unique" name="email" id="email" placeholder="Email" formControlName="email" required>
+              <div *ngIf="registerForm.get('email')!.invalid && (registerForm.get('email')!.dirty || registerForm.get('email')!.touched)">
+                <small class="form-text text-danger"
+                       *ngIf="registerForm.get('email')?.errors?.required"
+                >
+                    Vous devez renseigner votre email.
+                </small>
+
+                <small class="form-text text-danger"
+                       *ngIf="registerForm.get('email')?.errors?.invalid"
+                >
+                    Votre email est invalide.
+                </small>
+
+                <small class="form-text text-danger"
+                       *ngIf="registerForm.get('email')?.errors?.minlength"
+                >
+                    Votre email doit contenir au moins 5 caractères.
+                </small>
+
+                <small class="form-text text-danger"
+                       *ngIf="registerForm.get('email')?.errors?.maxlength"
+                >
+                    Votre email ne peut pas dépasser 100 caractères.
+                </small>
+            </div>
+             </div>
+
+
+             <div class="row">
+
+                <div class="form-group col">
+                  <label for="password">Mot de passe</label>
+                  <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" formControlName="password" required>
+                  <div *ngIf="registerForm.get('password')!.invalid && (registerForm.get('password')!.dirty || registerForm.get('password')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('password')?.errors?.required"
+                    >
+                        Vous devez renseigner votre mot de passe
+                    </small>
+
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('password')?.errors?.minlength"
+                    >
+                        Votre mot de passe doit contenir au moins 4 caractères.
+                    </small>
+
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('password')?.errors?.maxlength"
+                    >
+                        Votre mot de passe ne doit pas dépasser 50 caractères.
+                    </small>
+                </div>
+                </div>
+
+                <div class="form-group col">
+                  <label for="cfpassword">Confirmer le mot de passe</label>
+                  <input type="password" class="form-control" name="cfpassword" id="cfpassword" placeholder="Confirmer le mot de passe" formControlName="cfpassword" required>
+                  <div *ngIf="registerForm.get('cfpassword')!.invalid && (registerForm.get('cfpassword')!.dirty || registerForm.get('cfpassword')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('cfpassword')?.errors?.required"
+                    >
+                        Vous devez confirmer votre mot de passe
+                    </small>
+
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('cfpassword')?.errors?.minlength"
+                    >
+                        Votre mot de passe doit contenir au moins 4 caractères.
+                    </small>
+
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('cfpassword')?.errors?.maxlength"
+                    >
+                        Votre mot de passe ne doit pas dépasser 50 caractères.
+                    </small>
+                 </div>
+                </div>
+
+              </div>
+
+
+              <div class="row">
+
+                <div class="form-group col">
+                  <label for="dateNaiss">Date de naissance</label>
+                  <input type="date" class="form-control" name="dateNaiss" id="dateNaiss" placeholder="Date de naissance" formControlName="dateNaiss" required>
+                  <div *ngIf="registerForm.get('dateNaiss')!.invalid && (registerForm.get('dateNaiss')!.dirty || registerForm.get('dateNaiss')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('dateNaiss')?.errors?.required"
+                    >
+                        Vous devez renseigner votre date de naissance.
+                    </small>
+                  </div>
+                </div>
+
+                <div class="form-group col">
+                  <label for="lieuNaiss">Lieu de naissance</label>
+                  <input type="lieuNaiss" class="form-control" name="lieuNaiss" id="lieuNaiss" placeholder="Lieu de naissance" formControlName="lieuNaiss" required>
+                  <div *ngIf="registerForm.get('lieuNaiss')!.invalid && (registerForm.get('lieuNaiss')!.dirty || registerForm.get('lieuNaiss')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('lieuNaiss')?.errors?.required"
+                    >
+                        Vous devez renseigner votre lieu de naissance.
+                    </small>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <div class="form-group">
+                <label for="numRegistre">Numéro de registre de votre acte de naissance</label>
+                <input type="number" class="form-control taille-input-unique" name="numRegistre" id="numRegistre" placeholder="Numéro de registre de votre acte de naissance" formControlName="numRegistre" required>
+                <div *ngIf="registerForm.get('numRegistre')!.invalid && (registerForm.get('numRegistre')!.dirty || registerForm.get('numRegistre')!.touched)">
+                  <small class="form-text text-danger"
+                         *ngIf="registerForm.get('numRegistre')?.errors?.required"
+                  >
+                      Vous devez renseigner votre lieu de naissance.
+                  </small>
+                </div>
+              </div>
+
+
+              <div class="row">
+
+                <div class="form-group col">
+                  <label for="numTel">Numéro de téléphone</label>
+                  <input type="tel" class="form-control" name="numTel" id="numTel" placeholder="Numéro de téléphone" formControlName="numTel" required>
+                  <div *ngIf="registerForm.get('numTel')!.invalid && (registerForm.get('numTel')!.dirty || registerForm.get('numTel')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('numTel')?.errors?.required"
+                    >
+                        Vous devez confirmer votre mot de passe
+                    </small>
+
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('numTel')?.errors?.minlength"
+                    >
+                        Votre numéro de téléphone doit contenir au moins 4 caractères.
+                    </small>
+
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('numTel')?.errors?.maxlength"
+                    >
+                        Votre numéro de téléphone ne doit pas dépasser 9 caractères.
+                    </small>
+                </div>
+              </div>
+
+                <div class="form-group col">
+                  <label for="adresse">Adresse</label>
+                  <input type="text" class="form-control" name="adresse" id="adresse" placeholder="Adresse" formControlName="adresse" required>
+                  <div *ngIf="registerForm.get('adresse')!.invalid && (registerForm.get('adresse')!.dirty || registerForm.get('adresse')!.touched)">
+                    <small class="form-text text-danger"
+                           *ngIf="registerForm.get('adresse')?.errors?.required"
+                    >
+                        Vous devez renseigner votre adresse.
+                    </small>
+                  </div>
+                </div>
+
+              </div>
+              &nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="btn btn-primary" >S'inscrire</button><br><br>
+              <div class="alert alert-success" *ngIf="success">
+                <strong>Compte créé</strong> avec succès.
+              </div>
+              <div class="alert alert-danger" *ngIf="errorCreate">
+                <strong>Echec de la création du compte : </strong> vous n'avez pas été déclaré dans cette mairie.
+              </div> 
+        </form>
+    </div>
+</div>
 
