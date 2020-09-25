@@ -55,6 +55,7 @@ import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AideComponent } from './aide/aide.component';
+
 import { HomeDemandeurComponent } from './home-demandeur/home-demandeur.component';
 import { HomeOfficierComponent } from './home-officier/home-officier.component';
 import { AlertComponent } from './alert/alert.component';
@@ -73,6 +74,7 @@ const appRoutes: Routes = [
   { path: 'auth', component: AuthComponent },
   { path: 'aide', component: AideComponent },
   { path: 'register', component: RegisterComponent },
+
   { path: 'demandeur', component: HomeDemandeurComponent},
   { path: 'home-officier', component: HomeOfficierComponent},
   { path: 'planning', component: PlanningComponent},
@@ -86,6 +88,7 @@ const appRoutes: Routes = [
   { path: 'demande-naissance',component:DemandeNaissanceComponent},
   { path: 'delivre-acte',component:DelivrerActeComponent },
   { path: '', component: HomeComponent }
+  
 ];
 
 @NgModule({
@@ -97,6 +100,7 @@ const appRoutes: Routes = [
     AuthComponent,
     RegisterComponent,
     AideComponent,
+
     HomeDemandeurComponent,
     HomeOfficierComponent,
     AlertComponent,
@@ -109,6 +113,7 @@ const appRoutes: Routes = [
     RendezVousComponent,
     DemandeNaissanceComponent,
     DelivrerActeComponent
+
   ],
   imports: [
     BrowserModule,
