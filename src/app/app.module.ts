@@ -68,6 +68,7 @@ import { HistoryRvComponent } from './history-rv/history-rv.component';
 import { RendezVousComponent } from './rendez-vous/rendez-vous.component';
 import { DemandeNaissanceComponent } from './demande-naissance/demande-naissance.component';
 import { DelivrerActeComponent } from './delivrer-acte/delivrer-acte.component';
+import { DeclarationMariageComponent } from './declaration-mariage/declaration-mariage.component';
 
 
 const appRoutes: Routes = [
@@ -84,6 +85,7 @@ const appRoutes: Routes = [
   { path: 'home-declaration', component: HomeDeclarationComponent},
   { path: 'rendez-vous', component:RendezVousComponent },
   { path: 'declaration-naissance',component:DeclarationNaissanceComponent},
+  { path: 'declaration-mariage',component:DeclarationMariageComponent},
   { path: 'declaration-deces',component:DeclarationDecesComponent},
   { path: 'demande-naissance',component:DemandeNaissanceComponent},
   { path: 'delivre-acte',component:DelivrerActeComponent },
@@ -112,7 +114,8 @@ const appRoutes: Routes = [
     HistoryRvComponent,
     RendezVousComponent,
     DemandeNaissanceComponent,
-    DelivrerActeComponent
+    DelivrerActeComponent,
+    DeclarationMariageComponent
 
   ],
   imports: [
