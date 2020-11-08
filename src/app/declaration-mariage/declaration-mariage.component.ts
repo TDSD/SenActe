@@ -8,6 +8,8 @@ import { FormBuilder, Validators} from '@angular/forms';
 })
 export class DeclarationMariageComponent implements OnInit {
   ok : boolean;
+  errorCreate : boolean;
+  success : boolean;
   declarationMariageForm = this.fb.group({
     numeroRegistre: ['', [Validators.required,Validators.minLength(1)]],
     anneeActe: ['',[Validators.required,Validators.minLength(4),Validators.maxLength(4)]],
@@ -45,6 +47,10 @@ export class DeclarationMariageComponent implements OnInit {
   constructor(private fb : FormBuilder) { }
   soumettre(){
     this.ok = true;
+    if(this.declarationMariageForm.invalid){
+      return;
+    }
+    alert('la declaration est enregistré avec succés');
   }
 
   ngOnInit(): void {

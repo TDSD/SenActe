@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="numeroRegistre" >numero registre:</label>
-                    <input type="number" name="numeroRegistre" id="numeroRegistre" class="form-control" placeholder="numero registre" required>
+                    <input type="number" name="numeroRegistre" id="numeroRegistre" class="form-control" placeholder="numero registre" formControlName="numeroRegistre" required>
                     <div *ngIf="declarationMariageForm.get('numeroRegistre')!.invalid && (declarationMariageForm.get('numeroRegistre')!.dirty || declarationMariageForm.get('numeroRegistre')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('numeroRegistre')?.errors?.required"
@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group col">
                     <label for="anneeActe">Annee de l'acte:</label>
-                    <input type="number" name="anneeActe" id="anneeActe" class="form-control" placeholder="entrer l'année" required>
+                    <input type="number" name="anneeActe" id="anneeActe" class="form-control" placeholder="entrer l'année" formControlName="anneeActe" required>
                     <div *ngIf="declarationMariageForm.get('anneeActe')!.invalid && (declarationMariageForm.get('anneeActe')!.dirty || declarationMariageForm.get('anneeActe')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('anneeActe')?.errors?.required"
@@ -43,10 +43,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col">
                     <label for="prenomOfficier" c>Prenom Officier:</label>
                     <div class="form-group col">
-                        <input type="text" name="prenomOfficier" id="prenomOfficier" class="form-control" placeholder="entrer votre prenom" required>
+                        <input type="text" name="prenomOfficier" id="prenomOfficier" class="form-control" placeholder="entrer votre prenom" formControlName="prenomOfficier" required>
                         <div *ngIf="declarationMariageForm.get('prenomOfficier')!.invalid && (declarationMariageForm.get('prenomOfficier')!.dirty || declarationMariageForm.get('prenomOfficier')!.touched)">
                             <small class="form-text text-danger"
                                    *ngIf="declarationMariageForm.get('prenomOfficier')?.errors?.required"
@@ -57,10 +57,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
+                <div class="form-group col">
                     <label for="nomOfficier" c> Nom officier:</label>
                     <div class="form-group col">
-                        <input type="text" name="nomOfficier" id="nomOfficier" class="form-control" placeholder="entrer votre nom" required>
+                        <input type="text" name="nomOfficier" id="nomOfficier" class="form-control" placeholder="entrer votre nom" formControlName="nomOfficier" required>
                         <div *ngIf="declarationMariageForm.get('nomOfficier')!.invalid && (declarationMariageForm.get('nomOfficier')!.dirty || declarationMariageForm.get('nomOfficier')!.touched)">
                             <small class="form-text text-danger"
                                    *ngIf="declarationMariageForm.get('nomOfficier')?.errors?.required"
@@ -75,7 +75,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="prenomMr" >Prenom Mr:</label>
-                    <input type="text" name="prenomMr" id="prenomMr" class="form-control"placeholder="prenom du marié" required>
+                    <input type="text" name="prenomMr" id="prenomMr" class="form-control"placeholder="prenom du marié" formControlName="prenomMr" required>
                     <div *ngIf="declarationMariageForm.get('prenomMr')!.invalid && (declarationMariageForm.get('prenomMr')!.dirty || declarationMariageForm.get('prenomMr')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('prenomMr')?.errors?.required"
@@ -85,9 +85,10 @@
                      
                     </div>
                 </div>
+                
                 <div class="form-group col">
                     <label for="nomMr" >Nom Mr:</label>
-                    <input type="text" name="nomMr" id="nomMr" class="form-control" placeholder="nom du marié" required>
+                    <input type="text" name="nomMr" id="nomMr" class="form-control" placeholder="nom du marié" formControlName="nomMr" required>
                     <div *ngIf="declarationMariageForm.get('nomMr')!.invalid && (declarationMariageForm.get('nomMr')!.dirty || declarationMariageForm.get('nomMr')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('nomMr')?.errors?.required"
@@ -101,7 +102,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="professionMr">profession Mr:</label>
-                    <input type="text" name="professionMr" id="professionMr" class="form-control" placeholder="profession du marié" required>
+                    <input type="text" name="professionMr" formControlName="professionMr" id="professionMr" class="form-control" placeholder="profession du marié" required>
                     <div *ngIf="declarationMariageForm.get('professionMr')!.invalid && (declarationMariageForm.get('professionMr')!.dirty || declarationMariageForm.get('professionMr')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('professionMr')?.errors?.required"
@@ -115,7 +116,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="dateNaissMr" >Date Naissance Mr:</label>
-                    <input type="date" name="dateNaissMr" id="dateNaissMr" class="form-control" placeholder="date de naissance du marié " required>
+                    <input type="date" name="dateNaissMr" id="dateNaissMr" formControlName="dateNaissMr" class="form-control" placeholder="date de naissance du marié " required>
                     <div *ngIf="declarationMariageForm.get('dateNaissMr')!.invalid && (declarationMariageForm.get('dateNaissMr')!.dirty || declarationMariageForm.get('dateNaissMr')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('dateNaissMr')?.errors?.required"
@@ -127,7 +128,7 @@
                 </div> 
                 <div class="form-group col">
                     <label for="lieuNaissMr" >Lieu Naissance Mr:</label>
-                        <input type="text" name="lieuNaissMr" id="lieuNaissMr" class="form-control" placeholder="lieu de naissance du marié" required>
+                        <input type="text" name="lieuNaissMr" id="lieuNaissMr" class="form-control" placeholder="lieu de naissance du marié" formControlName="lieuNaissMr" required>
                         <div *ngIf="declarationMariageForm.get('lieuNaissMr')!.invalid && (declarationMariageForm.get('lieuNaissMr')!.dirty || declarationMariageForm.get('lieuNaissMr')!.touched)">
                             <small class="form-text text-danger"
                                    *ngIf="declarationMariageForm.get('lieuNaissMr')?.errors?.required"
@@ -138,24 +139,25 @@
                         </div>
                 </div>  
             </div>
-            <div class="form-group col">
-                <label for="domicileMr">Domicile Mr: </label>
-                <input type="text" name="domicileMr" id="domicileMr" class="form-control" placeholder="domicile du marié">
-                <div *ngIf="declarationMariageForm.get('domicileMr')!.invalid && (declarationMariageForm.get('domicileMr')!.dirty || declarationMariageForm.get('domicileMr')!.touched)">
-                    <small class="form-text text-danger"
-                           *ngIf="declarationMariageForm.get('domicileMr')?.errors?.required"
-                    >
-                        Vous devez renseigner le domicile.
-                    </small>
-                 
+            <div class="row">
+                <div class="form-group col">
+                    <label for="domicileMr">Domicile Mr: </label>
+                    <input type="text" name="domicileMr" id="domicileMr" class="form-control" placeholder="domicile du marié" formControlName="domicileMr" required>
+                    <div *ngIf="declarationMariageForm.get('domicileMr')!.invalid && (declarationMariageForm.get('domicileMr')!.dirty || declarationMariageForm.get('domicileMr')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="declarationMariageForm.get('domicileMr')?.errors?.required"
+                        >
+                            Vous devez renseigner le domicile.
+                        </small>
+                     
+                    </div>
+    
                 </div>
-
-            </div>
-            
+            </div>          
             <div class="row">
                 <div class="form-group col">
                     <label for="nomPrenomPereMr" >Prenom && Nom pere Mr:</label>
-                    <input type="text" name="nomPrenomPereMr" id="nomPrenomPereMr" class="form-control" placeholder="prenom et nom du pere du marié" required>
+                    <input type="text" name="nomPrenomPereMr" id="nomPrenomPereMr" class="form-control" placeholder="prenom et nom du pere du marié" formControlName="nomPrenomPereMr" required>
                     <div *ngIf="declarationMariageForm.get('nomPrenomPereMr')!.invalid && (declarationMariageForm.get('nomPrenomPereMr')!.dirty || declarationMariageForm.get('nomPrenomPereMr')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('nomPrenomPereMr')?.errors?.required"
@@ -168,7 +170,7 @@
                
                 <div class="form-group col">
                     <label for="nomPrenomMereMr">Prenom && Nom Mere Mr:</label>
-                    <input type="text" name="nomPrenomMereMr" id="nomPrenomMereMr" class="form-control" placeholder="prenom et nom mére du marié" required>
+                    <input type="text" name="nomPrenomMereMr" id="nomPrenomMereMr" class="form-control" placeholder="prenom et nom mére du marié" formControlName="nomPrenomMereMme" required>
                     <div *ngIf="declarationMariageForm.get('nomPrenomMereMr')!.invalid && (declarationMariageForm.get('nomPrenomMereMr')!.dirty || declarationMariageForm.get('nomPrenomMereMr')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('nomPrenomMereMr')?.errors?.required"
@@ -184,7 +186,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="prenomMme" >Prenom Mme:</label>
-                    <input type="text" name="prenomMme" id="prenomMme" class="form-control"placeholder="prenom de la mariée" required>
+                    <input type="text" name="prenomMme" id="prenomMme" class="form-control"placeholder="prenom de la mariée" formControlName="prenomMme" required>
                     <div *ngIf="declarationMariageForm.get('prenomMme')!.invalid && (declarationMariageForm.get('prenomMme')!.dirty || declarationMariageForm.get('prenomMme')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('prenomMr')?.errors?.required"
@@ -196,7 +198,7 @@
                 </div>
                 <div class="form-group col">
                     <label for="nomMme" >Nom Mme:</label>
-                    <input type="text" name="nomMme" id="nomMme" class="form-control" placeholder="nom de la mariée" required>
+                    <input type="text" name="nomMme" id="nomMme" class="form-control" placeholder="nom de la mariée" formControlName="nomMme" required>
                     <div *ngIf="declarationMariageForm.get('nomMme')!.invalid && (declarationMariageForm.get('nomMme')!.dirty || declarationMariageForm.get('nomMme')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('nomMme')?.errors?.required"
@@ -210,7 +212,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="professionMme">profession Mme:</label>
-                    <input type="text" name="professionMme" id="professionMme" class="form-control" placeholder="profession de la mariée" required>
+                    <input type="text" name="professionMme" id="professionMme" class="form-control" placeholder="profession de la mariée" formControlName="professionMme" required>
                     <div *ngIf="declarationMariageForm.get('professionMme')!.invalid && (declarationMariageForm.get('professionMme')!.dirty || declarationMariageForm.get('professionMme')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('professionMme')?.errors?.required"
@@ -224,7 +226,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="dateNaissMme" >Date Naissance Mme:</label>
-                    <input type="date" name="dateNaissMme" id="dateNaissMme" class="form-control" placeholder="date de naissance de la mariée " required>
+                    <input type="date" name="dateNaissMme" id="dateNaissMme" class="form-control" placeholder="date de naissance de la mariée " formControlName="dateNaissMme" required>
                     <div *ngIf="declarationMariageForm.get('dateNaissMme')!.invalid && (declarationMariageForm.get('dateNaissMme')!.dirty || declarationMariageForm.get('dateNaissMme')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('dateNaissMme')?.errors?.required"
@@ -236,7 +238,7 @@
                 </div> 
                 <div class="form-group col">
                     <label for="lieuNaissMme" >Lieu Naissance Mme:</label>
-                        <input type="text" name="lieuNaissMme" id="lieuNaissMme" class="form-control" placeholder="lieu de naissance de la mariée" required>
+                        <input type="text" name="lieuNaissMme" id="lieuNaissMme" class="form-control" placeholder="lieu de naissance de la mariée" formControlName="lieuNaissMme" required>
                         <div *ngIf="declarationMariageForm.get('lieuNaissMme')!.invalid && (declarationMariageForm.get('lieuNaissMme')!.dirty || declarationMariageForm.get('lieuNaissMme')!.touched)">
                             <small class="form-text text-danger"
                                    *ngIf="declarationMariageForm.get('lieuNaissMme')?.errors?.required"
@@ -247,23 +249,26 @@
                         </div>
                 </div>  
             </div>
-            <div class="form-group col">
-                <label for="domicileMme">Domicile Mme: </label>
-                <input type="text" name="domicileMme" id="domicileMme" class="form-control" placeholder="domicile de la mariée">
-                <div *ngIf="declarationMariageForm.get('domicileMme')!.invalid && (declarationMariageForm.get('domicileMme')!.dirty || declarationMariageForm.get('domicileMme')!.touched)">
-                    <small class="form-text text-danger"
-                           *ngIf="declarationMariageForm.get('domicileMme')?.errors?.required"
-                    >
-                        Vous devez renseigner le domicile.
-                    </small>
-                 
+            <div class="row">
+
+                <div class="form-group col">
+                    <label for="domicileMme">Domicile Mme: </label>
+                    <input type="text" name="domicileMme" id="domicileMme" class="form-control" placeholder="domicile de la mariée"formControlName="domicileMme" required>
+                    <div *ngIf="declarationMariageForm.get('domicileMme')!.invalid && (declarationMariageForm.get('domicileMme')!.dirty || declarationMariageForm.get('domicileMme')!.touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="declarationMariageForm.get('domicileMme')?.errors?.required"
+                        >
+                            Vous devez renseigner le domicile.
+                        </small>
+                     
+                    </div>
                 </div>
             </div>
             
             <div class="row">
                 <div class="form-group col">
                     <label for="nomPrenomPereMme" >Prenom && nom pere:</label>
-                    <input type="text" name="nomPrenomPereMme" id="nomPrenomPereMme" class="form-control" placeholder="prenom et nom du pere de la femme " required>
+                    <input type="text" name="nomPrenomPereMme" id="nomPrenomPereMme" class="form-control" placeholder="prenom et nom du pere de la femme " formControlName="nomPrenomPereMme" required>
                     <div *ngIf="declarationMariageForm.get('nomPrenomPereMme')!.invalid && (declarationMariageForm.get('nomPrenomPereMme')!.dirty || declarationMariageForm.get('nomPrenomPereMme')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('nomPrenomPereMme')?.errors?.required"
@@ -275,7 +280,7 @@
                 </div> 
                 <div class="form-group col">
                     <label for="nomPrenomMereMme" >Prenom et Nom Mere:</label>
-                    <input type="text" name="nomPrenomMereMme" id="nomPrenomMereMme" class="form-control" placeholder="prenom et nom de la mére de la femme" required>
+                    <input type="text" name="nomPrenomMereMme" id="nomPrenomMereMme" class="form-control" formControlName="nomPrenomMereMme" placeholder="prenom et nom de la mére de la femme" required>
                     <div *ngIf="declarationMariageForm.get('nomPrenomMereMme')!.invalid && (declarationMariageForm.get('nomPrenomMereMme')!.dirty || declarationMariageForm.get('nomPrenomMereMme')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('nomPrenomMereMme')?.errors?.required"
@@ -290,7 +295,7 @@
             <div class="row">
                 <div class="form-group col">
                     <label for="dateMariageCoutume" >Date Mariage coutume:</label>
-                    <input type="date" name="dateMariageCoutume" id="dateMariageCoutume" class="form-control" placeholder="date mariage traditionel" required>
+                    <input type="date" name="dateMariageCoutume" id="dateMariageCoutume" class="form-control" placeholder="date mariage traditionel" formControlName="dateMariageCoutume" required>
                     <div *ngIf="declarationMariageForm.get('dateMariageCoutume')!.invalid && (declarationMariageForm.get('dateMariageCoutume')!.dirty || declarationMariageForm.get('dateMariageCoutume')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('dateMariageCoutume')?.errors?.required"
@@ -302,7 +307,7 @@
                 </div> 
                 <div class="form-group col">
                     <label for="lieuMariageCoutme" >Lieu Mariage coutume</label>
-                    <input type="text" name="lieuMariageCoutme" id="lieuMariageCoutme" class="form-control" placeholder="Ex:Dakar" required>
+                    <input type="text" name="lieuMariageCoutme" id="lieuMariageCoutme" class="form-control" placeholder="Ex:Dakar" formControlName="lieuMariageCoutme" required>
                     <div *ngIf="declarationMariageForm.get('lieuMariageCoutme')!.invalid && (declarationMariageForm.get('lieuMariageCoutme')!.dirty || declarationMariageForm.get('lieuMariageCoutme')!.touched)">
                         <small class="form-text text-danger"
                                *ngIf="declarationMariageForm.get('lieuMariageCoutme')?.errors?.required"
@@ -313,17 +318,19 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group col">
-                <label for="typeMariage">Type de Mariage:</label>
-                <select name="typeMariage" id="typeMariage" class="form-control">
-                    <option value="S">Separation des biens</option>
-                    <option value="C">Communauté des biens</option>
-                </select>
-                
+            <div class="row">
+                <div class="form-group col">
+                    <label for="typeMariage">Type de Mariage:</label>
+                    <select name="typeMariage" id="typeMariage" class="form-control" formControlName="typeMariage" required>
+                        <option value="S">Separation des biens</option>
+                        <option value="C">Communauté des biens</option>
+                    </select>
+                    
+                </div>
             </div>
            
         </form>
-        <button class="btn btn-success" (click)="soumettre()">Soumettre</button><br>
+        <button class="btn btn-success" (click)="soumettre()" [disabled]="declarationMariageForm.invalid">Soumettre</button><br>
         <div class="alert alert-success" *ngIf="ok">
             <strong>Déclaration</strong> prise en compte.
         </div>
